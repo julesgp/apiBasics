@@ -1,9 +1,7 @@
 let mongoose = require('mongoose');
 require('dotenv').config()
 
-const db = 'freecode'
-
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.fkymc.mongodb.net/${db}`);
+mongoose.connect(`${process.env.DATABASE}`);
 
 let CustomerSchema = new mongoose.Schema({
     name: String, 
